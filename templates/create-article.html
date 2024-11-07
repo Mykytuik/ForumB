@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{%block title%}
+Створення статті
+{%endblock%}
+{%block body%}
+<div class="container mt-5">
+    <h1>Напишіть свою статтю</h1>
+    <form method="post">
+
+        <input type="text" name="title" id="title" class="form-control" placeholder="Введіть назву" required><br>
+        <textarea  name="intro" id="intro" class="form-control" placeholder="Введіть опис" required></textarea><br>
+        <textarea  name="text" id="text" class="form-control" placeholder="Введіть текст" required></textarea><br>
+        <input type="submit"   class="btn-lg"  value="Відправити"><br>
+            
+    </form>
+
+</div>
+{%endblock%}

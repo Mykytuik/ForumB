@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+{%block title%}
+posts
+{%endblock%}
+{%block body%}
+<div class="container mt-5">
+    <h1>Всі публікації</h1>
+    {% if articles|length > 0 %}
+    
+        {% for i in articles %}
+        <div class="alert alert-info">
+            <h2> {{i.title }} </h2>
+            <p>{{ i. intro }}</p>
+            <p><b>Дата: {{ i.date.strftime('%Y-%m-%d %H:%M') }}</b></p>
+            <a  href="/post/{{i.id}}" class="btn btn-warning">Детальніше</a>
+        
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>На сайті ще немає жодного поста</p>
+    {% endif %}
+</div>
+{%endblock%}

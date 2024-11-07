@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%block title%}
+{{article.title}}
+{%endblock%}
+{%block body%}
+<div class="container mt-5">
+    <h1>Пост:{{article.id}}</h1>
+    
+    
+    <div class="alert alert-info">
+        <h1>{{article.title}}</h1>
+        <p>{{ article.intro }}</p>
+        <p>{{ article.text }}</p>
+        <p><b>Дата: {{ article.date.strftime('%Y-%m-%d %H:%M') }}</b></p>
+        <a href="/post/{{article.id}}/delate" class="btn btn-warning">Видалити цей пост</a>
+        <a href="/post/{{article.id}}/update" class="btn btn-warning">Редагувати цей пост</a>
+    
+    </div>
+    
+</div>
+{%endblock%}
